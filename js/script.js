@@ -1,6 +1,6 @@
 $.ajax({
     type: "GET",
-    url: "https://app.ticketmaster.com/discovery/v2/events.json?countryCode=US&apikey=" + api_key,
+    url: "https://app.ticketmaster.com/discovery/v2/events.json?countryCode=US&apikey=" + ticketms_api_key,
     async: true,
     dataType: "json",
     success: function (json) {
