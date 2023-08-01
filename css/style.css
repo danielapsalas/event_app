@@ -1,19 +1,21 @@
-*{
+/* Global Styles */
+* {
     margin: 0;
     padding: 0;
     font-size: 16px;
 }
 
-body{
-    /*background-color: #221e22!important;*/
+body {
+
 }
 
-/*Landing page collage made with grid*/
+/* Landing Page Collage */
 .grid-collage {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     gap: 5px;
-    width: 50%;
+    width: 60%;
+    padding: 0 5%;
 }
 
 .grid-collage img {
@@ -23,6 +25,7 @@ body{
     border-radius: 5px;
 }
 
+/* Grid Items */
 .ticket {
     grid-column: 1 / 4;
     grid-row: 1;
@@ -43,94 +46,105 @@ body{
     grid-row: 2;
 }
 
-.landing-page-container{
+/* Landing Page Container */
+.landing-page-container {
+    background-color: rgba(0, 0, 0, 0.91) !important;
+}
+
+/* Input Bar Styles */
+.input-bar-container{
     display: flex;
-    margin: 2%;
+    justify-content: center;
+    align-content: center;
+}
+
+.input-bar {
+    padding: 10px;
+    background-color: pink;
+    width: 100%;
+    max-width: 800px;
+    margin: 2.5%;
+}
+
+/* Input Bar Child Elements */
+.input-location {
+    width: 20%;
+    padding: 1.5% 2%;
+    border: none;
+}
+
+.input-text {
+    width: 50%;
+    padding: 1.5% 2%;
+    border: none;
+}
+
+/* Search Button */
+.search-button {
+    display: inline-block;
+    padding: 1.5% 2%;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+    width: 20%;
+    border: none;
+}
+
+.location-button{
+    padding: 1.5% 2%;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+    width: 50%;
+    border: none;
+}
+/* Fonts for Text Center Landing */
+.text-center-landing p {
+    font-size: 2.5rem;
+    color: white;
+    padding: 10% 10% 10% 0;
 }
 
 .text-center-landing{
-    display: flex;
-    padding: 2%;
-    width: 30%;
-    position: relative; /* Required for absolute positioning */
+    margin: 2% 0 2% 2%;
+
 }
 
-/* Input bar styles */
-.input-bar {
-    position: absolute;
-    top: 70%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    padding: 10px;
-    background-color: white;
-    border-radius: 5px;
-    width: 100%;
-    max-width: 500px;
-    z-index: 1;
-    border: 2px solid red;
+.grid-collage{
+    margin: 2% 0 2% 0;
 }
 
-.input-location{
-    width: 20%;
-}
-
-.input-text{
-    width: 50%;
-}
-
-
-.search-button {
-    display: inline-block;
-    padding: 8px 16px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-top: 5px;
-    width: 20%;
-}
-
-/*Fonts*/
-.text-center-landing p{
-    font-size: 2.5rem;
-}
-/*Fonts*/
-
-
+/* Media Query for Smaller Screens */
 @media screen and (max-width: 768px) {
-    /*Landing page collage made with grid*/
+    /* Adjust Landing Page Collage for Smaller Screens */
     .grid-collage {
         width: 80%;
     }
 
-    .landing-page-container{
+    /* Adjust Landing Page Container for Smaller Screens */
+    .landing-page-container {
         flex-direction: column;
-        padding: 8%;
-        margin: 0 2%;
+        padding: 4%;
     }
 
-    .grid-collage{
+    /* Adjust Grid Collage and Text Center Landing for Smaller Screens */
+    .grid-collage {
         width: 100%;
         margin: 0;
         padding: 0;
         order: 2;
     }
 
-    .text-center-landing{
-        width: 100%;
-        margin: 0;
-        padding: 0;
-        order: 1;
-    }
-
 }
 
+/* Media Query for Larger Screens */
 @media screen and (min-width: 769px) {
-    .center-landing{
+    /* Center Larger Screens with Flexbox */
+    .center-landing {
         display: flex;
         justify-content: center;
         align-content: center;
     }
 }
+
 

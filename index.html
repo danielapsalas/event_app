@@ -35,12 +35,6 @@
 <main>
     <div class="landing-page-container">
         <div class="center-landing">
-            <div class="text-center-landing">
-                <p>
-                    Unleash the Adventure,<br>
-                    Simplify the Experience
-                </p>
-            </div>
             <div class="grid-collage">
                 <div class="grid-item ticket">
                     <img src="imgs/grid-collage/ticket.jpg" alt="A crowd of people at a concert">
@@ -55,14 +49,26 @@
                     <img src="imgs/grid-collage/drum-set.jpg" alt="A crowd of people at a concert">
                 </div>
             </div>
-            <div class="input-bar">
-                <input class="input-location" type="text" placeholder="Zipcode...">
-                <input class="input-text" type="text" placeholder="Enter text...">
-                <button class="search-button">Search</button>
+            <div class="text-center-landing">
+                <p>
+                    Unleash the Adventure,
+                    <br>Simplify the Experience
+                </p>
+                <button onclick="getLocation()" class="location-button">Find Events Nearby!</button>
+
             </div>
         </div>
     </div>
+    <div class="input-bar-container w-100">
+        <div class="input-bar">
+            <input class="input-location" type="text" placeholder="City or Zipcode...">
+            <input class="input-text" type="text" placeholder="Search for events...">
+            <button class="search-button">Search</button>
+        </div>
+    </div>
 </main>
+
+
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
