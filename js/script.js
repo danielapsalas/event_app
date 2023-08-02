@@ -72,3 +72,12 @@ function getLocation() {
     }
 }
 
+$(document).ready(function() {
+    // load cards
+    getLocation();
+
+    $('#getLocationCarouselButton').click(function() {
+        getLocation();
+    });
+});
+

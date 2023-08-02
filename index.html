@@ -55,7 +55,6 @@
                     <br>Simplify the Experience
                 </p>
                 <button onclick="getLocation()" class="location-button">Find Events Nearby!</button>
-
             </div>
         </div>
     </div>
@@ -73,7 +72,9 @@
 <script id="event-card-template" type="text/template">
     <div class="grid-cards-near-user">
         <div class="grid-card-item card">
-            <div class="card-img-top" style="background-image: url('{{eventImage}}');"></div>
+            <div class="card-img-top">
+                <img src="{{eventImage}}" alt="Event Image" class="img-container">
+            </div>
             <div class="card-body">
                 <h3 class="event-title card-title">{{eventName}}</h3>
                 <p class="event-date card-text">{{eventDate}}</p>
@@ -83,6 +84,9 @@
         </div>
     </div>
 </script>
+
+
+
 
 
 
