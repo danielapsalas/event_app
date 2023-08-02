@@ -66,7 +66,24 @@
             <button class="search-button">Search</button>
         </div>
     </div>
+    <div class="event-container"></div>
 </main>
+
+
+<script id="event-card-template" type="text/template">
+    <div class="grid-cards-near-user">
+        <div class="grid-card-item card">
+            <div class="card-img-top" style="background-image: url('{{eventImage}}');"></div>
+            <div class="card-body">
+                <h3 class="event-title card-title">{{eventName}}</h3>
+                <p class="event-date card-text">{{eventDate}}</p>
+                <p class="event-venue card-text">{{eventVenue}}</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+        </div>
+    </div>
+</script>
+
 
 
 

@@ -1,4 +1,4 @@
-/* Global Styles */
+/* global styles */
 * {
     margin: 0;
     padding: 0;
@@ -9,7 +9,7 @@ body {
 
 }
 
-/* Landing Page Collage */
+/* landing page collage */
 .grid-collage {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
@@ -21,11 +21,11 @@ body {
 .grid-collage img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Use object-fit: cover; to fill the grid cell entirely */
+    object-fit: cover; /* use object-fit: cover; to fill the grid cell entirely */
     border-radius: 5px;
 }
 
-/* Grid Items */
+/* grid items */
 .ticket {
     grid-column: 1 / 4;
     grid-row: 1;
@@ -46,13 +46,13 @@ body {
     grid-row: 2;
 }
 
-/* Landing Page Container */
+/* landing page container */
 .landing-page-container {
     background-color: rgba(0, 0, 0, 0.91) !important;
 }
 
-/* Input Bar Styles */
-.input-bar-container{
+/* input bar styles */
+.input-bar-container {
     display: flex;
     justify-content: center;
     align-content: center;
@@ -66,7 +66,7 @@ body {
     margin: 2.5%;
 }
 
-/* Input Bar Child Elements */
+/* input bar child elements */
 .input-location {
     width: 20%;
     padding: 1.5% 2%;
@@ -79,7 +79,7 @@ body {
     border: none;
 }
 
-/* Search Button */
+/* search button */
 .search-button {
     display: inline-block;
     padding: 1.5% 2%;
@@ -90,7 +90,7 @@ body {
     border: none;
 }
 
-.location-button{
+.location-button {
     padding: 1.5% 2%;
     background-color: #007bff;
     color: #fff;
@@ -98,36 +98,66 @@ body {
     width: 50%;
     border: none;
 }
-/* Fonts for Text Center Landing */
+
+/* fonts for text center landing */
 .text-center-landing p {
     font-size: 2.5rem;
     color: white;
     padding: 10% 10% 10% 0;
 }
 
-.text-center-landing{
+.text-center-landing {
     margin: 2% 0 2% 2%;
-
 }
 
-.grid-collage{
+.grid-collage {
     margin: 2% 0 2% 0;
 }
 
-/* Media Query for Smaller Screens */
+.event-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.grid-cards-near-user {
+    justify-content: space-between;
+    align-content: center;
+    margin: 1rem;
+}
+
+.grid-card-item {
+    box-sizing: border-box;
+    width: 30rem;
+    height: 20rem;
+    border: 2px solid red;
+}
+
+.img-container {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+/* media query for smaller screens */
 @media screen and (max-width: 768px) {
-    /* Adjust Landing Page Collage for Smaller Screens */
+    /* adjust landing page collage for smaller screens */
     .grid-collage {
         width: 80%;
     }
 
-    /* Adjust Landing Page Container for Smaller Screens */
+    /* adjust landing page container for smaller screens */
     .landing-page-container {
         flex-direction: column;
         padding: 4%;
     }
 
-    /* Adjust Grid Collage and Text Center Landing for Smaller Screens */
+    /* adjust grid collage and text center landing for smaller screens */
     .grid-collage {
         width: 100%;
         margin: 0;
@@ -135,16 +165,20 @@ body {
         order: 2;
     }
 
+    .grid-cards-near-user {
+        margin: 1rem 2rem;
+    }
 }
 
-/* Media Query for Larger Screens */
+/* media query for larger screens */
 @media screen and (min-width: 769px) {
-    /* Center Larger Screens with Flexbox */
+    /* center larger screens with flexbox */
     .center-landing {
         display: flex;
         justify-content: center;
         align-content: center;
     }
 }
+
 
 
