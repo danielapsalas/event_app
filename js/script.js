@@ -1,23 +1,33 @@
 function eventsByLocation(position) {
     const latitude = position.coords.latitude;
     const longitude = position.coords.longitude;
-    let url;
-    const keyword = $('#keywordInput').val();
+    const keyword = $('#keywordInput').val().trim();
+    const locationInput = $('#locationInput').val().trim();
 
-    if (position && keyword) {
-        console.log(position);
-        // use both latitude and longitude from the position data along with the keyword
-        url = "https://app.ticketmaster.com/discovery/v2/events.json?latlong=" + latitude + "," + longitude + "&keyword=" + keyword + "&apikey=" + ticketms_api_key;
-    } else if (position) {
-        console.log(position);
-        //uUse only the current location for the URL
-        url = "https://app.ticketmaster.com/discovery/v2/events.json?latlong=" + latitude + "," + longitude + "&apikey=" + ticketms_api_key;
-    } else if (keyword) {
-        // use only the keyword for the URL
-        url = "https://app.ticketmaster.com/discovery/v2/events.json?keyword=" + keyword + "&apikey=" + ticketms_api_key;
-    } else {
-        console.error("No valid input provided.");
+    let url = "https://app.ticketmaster.com/discovery/v2/events.json";
+
+
+    if (position) {
+        url += "?latlong=" + latitude + "," + longitude;
     }
+
+    if (keyword) {
+        url += "&keyword=" + keyword;
+    }
+
+    if (locationInput && !isNaN(locationInput)) {
+        console.log(locationInput.valueOf())
+        url += "&countryCode=US";
+        url = url.replace("latlong=" + latitude + "," + longitude, "postalCode=" + parseInt(locationInput));
+    } else if (locationInput) {
+        url = url.replace("latlong=" + latitude + "," + longitude, "city=" + locationInput);
+    }
+
+    url += "&apikey=" + ticketms_api_key;
+    console.log(url);
+
+
+
 
     $.ajax({
         type: "GET",
@@ -25,6 +35,7 @@ function eventsByLocation(position) {
         async: true,
         dataType: "json",
         success: function (json) {
+            console.log(json);
             if (json && json._embedded && json._embedded.events) {
                 $('.event-container').empty();
 
@@ -42,32 +53,17 @@ function eventsByLocation(position) {
                     eventContainer.insertAdjacentHTML('beforeend', eventCard);
                 });
             } else {
-
                 console.log("No events found.");
             }
-            hideLoadingImage();
+            hideLoadingImage(); // Call hideLoadingImage() when AJAX request is completed successfully
         },
         error: function (xhr, status, err) {
             console.error("Error fetching events:", err);
-            hideLoadingImage();
+            hideLoadingImage(); // Call hideLoadingImage() when AJAX request encounters an error
         }
     });
+
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -129,12 +125,11 @@ function fetchEventsWithoutLocation() {
         success: function (json) {
             console.log(json);
             // make cards
-            hideLoadingImage();
+            hideLoadingImage(); // Call hideLoadingImage() when AJAX request is completed successfully
         },
         error: function (xhr, status, err) {
-            // handle errors here.
             console.error("Error fetching events:", err);
-            hideLoadingImage();
+            hideLoadingImage(); // Call hideLoadingImage() when AJAX request encounters an error
         }
     });
 }
@@ -151,57 +146,31 @@ function getLocation() {
 
 // loading img
 function showLoadingImage() {
+    console.log("showLoadingImage() called");
     $('#loadingImage').show();
 }
 
 function hideLoadingImage() {
+    console.log("hideLoadingImage() called");
     $('#loadingImage').hide();
 }
 
 
 $(document).ready(function() {
-    // load cards
     getLocation();
 
-    // Click event listener for the search button
     $('#searchButton').click(function() {
-        const selectedOption = $("input[name='searchOption']:checked").val();
         const keyword = $('#keywordInput').val().trim();
+        const locationInput = $('#locationInput').val().trim();
 
-        if (selectedOption === 'location') {
-            // Search by location
-            const location = $('#locationInput').val().trim();
-            if (location !== '') {
-                showLoadingImage();
-                eventsByLocation(location);
-            } else {
-                alert('Please enter a location.');
-            }
-        } else if (selectedOption === 'event') {
-            // Search by event name
-            if (keyword !== '') {
-                showLoadingImage();
-                fetchEventsByKeyword(keyword);
-            } else {
-                alert('Please enter a keyword.');
-            }
-        } else if (selectedOption === 'currentLocation') {
-            // Use current location
+        console.log("inside document" + locationInput)
+        if (keyword !== '' || locationInput !== '') {
             showLoadingImage();
-            getLocation(eventsByLocation);
-        }
-    });
-
-    // Click event listener for the radio buttons
-    $('input[name="searchOption"]').change(function() {
-        const selectedOption = $(this).val();
-        if (selectedOption === 'location' || selectedOption === 'currentLocation') {
-            // Activate the location input
-            $('#locationInput').prop('disabled', false);
+            getLocation();
         } else {
-            // Deactivate the location input
-            $('#locationInput').prop('disabled', true);
+            alert('Please enter a keyword or a location.');
         }
     });
 });
+
 

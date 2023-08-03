@@ -143,7 +143,6 @@ body {
     background-repeat: no-repeat;
 }
 
-
 /* media query for smaller screens */
 @media screen and (max-width: 768px) {
     /* adjust landing page collage for smaller screens */
