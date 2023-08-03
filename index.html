@@ -60,10 +60,14 @@
     </div>
     <div class="input-bar-container w-100">
         <div class="input-bar">
-            <input class="input-location" type="text" placeholder="City or Zipcode...">
-            <input class="input-text" type="text" placeholder="Search for events...">
-            <button class="search-button">Search</button>
+            <input id="locationInput" class="input-location" type="text" placeholder="City or Zipcode..." disabled>
+            <input id="keywordInput" class="input-text" type="text" placeholder="Search for events...">
+            <button id="searchButton" class="search-button">Search</button>
         </div>
+    </div>
+    <!--  loading img  -->
+    <div id="loadingImage" class="spinner-border loadingImage" role="status">
+        <span class="visually-hidden">Loading...</span>
     </div>
     <div class="event-container"></div>
 </main>
