@@ -17,8 +17,7 @@ function eventsByLocation(position) {
 
     if (locationInput && !isNaN(locationInput)) {
         console.log(locationInput.valueOf())
-        url += "&countryCode=US";
-        url = url.replace("latlong=" + latitude + "," + longitude, "postalCode=" + parseInt(locationInput));
+        url = url.replace("latlong=" + latitude + "," + longitude, "postalcode=" + locationInput.toString());
     } else if (locationInput) {
         url = url.replace("latlong=" + latitude + "," + longitude, "city=" + locationInput);
     }
