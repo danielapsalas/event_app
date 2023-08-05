@@ -116,6 +116,11 @@ body {
     align-content: center;
 }
 
+.margin-padding-titles{
+    margin: .5%;
+    padding: .5%;
+}
+
 .grid-collage {
     margin: 2% 0 2% 0;
 }
@@ -171,6 +176,16 @@ body {
     cursor: pointer;
 }
 
+.info-box-containers{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.info-box-containers div{
+    margin: 2rem;
+    padding: 1rem;
+}
+
 
 /* media query for smaller screens */
 @media screen and (max-width: 768px) {
@@ -196,10 +211,16 @@ body {
     .grid-cards-near-user {
         margin: 1rem 2rem;
     }
+
+    .info-box-containers{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
 }
 
 /* media query for larger screens */
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 770px) {
     /* center larger screens with flexbox */
     .center-landing {
         display: flex;
