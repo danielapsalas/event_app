@@ -34,7 +34,7 @@
 
 <main>
     <div class="landing-page-container">
-        <div class="center-landing">
+        <div class="center-landing vh-100">
             <div class="grid-collage">
                 <div class="grid-item ticket">
                     <img src="imgs/grid-collage/ticket.jpg" alt="A crowd of people at a concert">
@@ -49,14 +49,19 @@
                     <img src="imgs/grid-collage/drum-set.jpg" alt="A crowd of people at a concert">
                 </div>
             </div>
-            <div class="text-center-landing">
-                <p>
-                    Unleash the Adventure,
-                    <br>Simplify the Experience
-                </p>
-                <button onclick="getLocation()" class="location-button">Find Events Nearby!</button>
+            <div class="text-margin-landing">
+                <div class="text-center">
+                    <p>
+                        Unleash the Adventure,
+                        <br>Simplify the Experience
+                    </p>
+                    <button onclick="getLocation()" class="location-button"><a href="#jump-to-section" class="location-button-href">Find Events Nearby!</a></button>
+                </div>
             </div>
         </div>
+    </div>
+    <div class="events-title-container" id="jump-to-section">
+        <h2>Events & Concerts</h2>
     </div>
     <div class="input-bar-container w-100">
         <div class="input-bar">
@@ -76,8 +81,8 @@
 <script id="event-card-template" type="text/template">
     <div class="grid-cards-near-user">
         <div class="grid-card-item card">
-            <div class="card-img-top">
-                <img src="{{eventImage}}" alt="Event Image" class="img-container">
+            <div class="card-img-top img-container">
+                <img src="{{eventImage}}" alt="Event Image" class="img-fluid">
             </div>
             <div class="card-body">
                 <h3 class="event-title card-title">{{eventName}}</h3>
@@ -88,6 +93,8 @@
         </div>
     </div>
 </script>
+
+
 
 
 

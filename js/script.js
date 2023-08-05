@@ -25,9 +25,6 @@ function eventsByLocation(position) {
     url += "&apikey=" + ticketms_api_key;
     console.log(url);
 
-
-
-
     $.ajax({
         type: "GET",
         url: url,
@@ -170,6 +167,7 @@ $(document).ready(function() {
             alert('Please enter a keyword or a location.');
         }
     });
+
 });
 
 
