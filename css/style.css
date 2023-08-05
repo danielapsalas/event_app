@@ -182,10 +182,14 @@ body {
 }
 
 .info-box-containers div{
-    margin: 2rem;
+    margin: 0 1rem;
     padding: 1rem;
 }
 
+.margin-padding-titles h3{
+    margin: .5rem;
+    padding: .5rem;
+}
 
 /* media query for smaller screens */
 @media screen and (max-width: 768px) {
@@ -220,7 +224,7 @@ body {
 }
 
 /* media query for larger screens */
-@media screen and (min-width: 770px) {
+@media screen and (min-width: 769px) {
     /* center larger screens with flexbox */
     .center-landing {
         display: flex;
