@@ -244,6 +244,10 @@ body {
         flex-wrap: wrap;
         justify-content: space-evenly;
     }
+
+    .text-center-landing{
+        display: block;
+    }
 }
 
 /* media query for larger screens */
