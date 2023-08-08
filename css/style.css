@@ -48,7 +48,7 @@ body {
 
 /* landing page container */
 .landing-page-container {
-    background-color: rgba(0, 0, 0, 0.91) !important;
+    background-color: #313131 !important;
 }
 
 /* input bar styles */
@@ -103,11 +103,11 @@ body {
 .text-margin-landing p {
     font-size: 2.5rem;
     color: white;
-    padding: 10% 10% 10% 0;
+    padding: 10% 10% 10% 10%;
 }
 
 .text-margin-landing {
-    margin: 2% 0 2% 2%;
+    margin: 2% 2% 2% 2%;
 }
 
 .text-center-landing{
@@ -191,6 +191,29 @@ body {
     padding: .5rem;
 }
 
+.info-landing-section{
+    background-color: #414141;
+}
+
+.info-landing-section h3{
+    color: white;
+    font-size: 2rem;
+}
+
+.info-landing-section h4{
+    color: white;
+    font-size: 1.40rem;
+}
+
+.info-landing-section p{
+    color: white;
+    font-size: 1rem;
+}
+
+.info-landing-margin{
+    margin: 1%;
+    padding: .5%;
+}
 /* media query for smaller screens */
 @media screen and (max-width: 768px) {
     /* adjust landing page collage for smaller screens */
