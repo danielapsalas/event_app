@@ -91,13 +91,18 @@ body {
 }
 
 .location-button {
-    padding: 1.5% 2%;
+    padding: 2% 4%;
     background-color: #007bff;
     color: #fff;
     cursor: pointer;
     width: 50%;
     border: none;
 }
+
+.space-button{
+    padding: 10% 10% 10% 10%;
+}
+
 
 /* fonts for text center landing */
 .text-margin-landing p {
@@ -117,9 +122,9 @@ body {
 }
 
 .margin-padding-titles{
-    margin: .5%;
-    padding: .5%;
+    margin: 2%;
 }
+
 
 .grid-collage {
     margin: 2% 0 2% 0;
@@ -186,13 +191,9 @@ body {
     padding: 1rem;
 }
 
-.margin-padding-titles h3{
-    margin: .5rem;
-    padding: .5rem;
-}
 
 .info-landing-section{
-    background-color: #414141;
+    background-color: #6F6F6F;
 }
 
 .info-landing-section h3{
@@ -214,6 +215,19 @@ body {
     margin: 1%;
     padding: .5%;
 }
+
+/*.info-container-border{*/
+/*    border: 2px #414141 solid;*/
+/*}*/
+
+.testimonial-flex{
+    display: flex;
+}
+
+.testimonial-bg{
+    background-color: #9A9A9A;
+}
+
 /* media query for smaller screens */
 @media screen and (max-width: 768px) {
     /* adjust landing page collage for smaller screens */
@@ -247,6 +261,10 @@ body {
 
     .text-center-landing{
         display: block;
+    }
+
+    .margin-padding-titles{
+        margin: 5%;
     }
 }
 

@@ -10,7 +10,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
 </head>
 <body>
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
+<nav class="navbar navbar-expand-lg bg-dark navbar-dark fixed-top">
     <div class="container-fluid">
         <a class="navbar-brand" href="#">Navbar</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -19,18 +19,19 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    <a class="nav-link active text-light" aria-current="page" href="#">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Events</a>
+                    <a class="nav-link active text-light" aria-current="page" href="#">Events</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    <a class="nav-link active text-light" aria-current="page" href="#">Home</a>
                 </li>
             </ul>
         </div>
     </div>
 </nav>
+
 
 
 <div class="landing-page-container">
@@ -55,7 +56,9 @@
                     Unleash the Adventure,
                     <br>Simplify the Experience
                 </p>
+                <div class="space-button">
                 <button onclick="getLocation()" class="location-button"><a href="#jump-to-section" class="location-button-href">Find Events Nearby!</a></button>
+                </div>
             </div>
         </div>
     </div>
@@ -67,7 +70,7 @@
             <h3>Why Choose Us?</h3>
         </div>
         <div class="info-box-containers">
-            <div>
+            <div class="info-container-border">
                 <h4>Competitive Pricing</h4>
                 <p>
                     We're dedicated to enhancing your event experiences without breaking your budget. With our competitive
@@ -75,7 +78,7 @@
                     expensive tickets and hello to affordable entertainment that puts you in the front row.
                 </p>
             </div>
-            <div>
+            <div class="info-container-border">
                 <h4>Secure Ticketing</h4>
                 <p>
                     Rest assured that your ticket purchases guarantee authenticity and reliability. Our app employs top-tier
@@ -83,7 +86,7 @@
                     counterfeit issues. Your peace of mind is our utmost concern.
                 </p>
             </div>
-            <div>
+            <div class="info-container-border">
                 <h4>Support and Assistance</h4>
                 <p>
                     Access premium customer support whenever you deem necessary. Our dedicated support team is here to
@@ -95,12 +98,28 @@
     </div>
 </div>
 
-<div>
+<div class="testimonial-bg">
+    <div class="testimonial-flex">
+        <div class="margin-padding-titles">
+            <h3>Testimonials</h3>
+            <p>Hear it straight from our clients – their stories embody our commitment</p>
+        </div>
 
+    </div>
 </div>
 
 
-
+<div class="">
+    <div class="testimonial-flex">
+        <div class="margin-padding-titles">
+            <h3>Testimonials</h3>
+            <p>Hear it straight from our clients – their stories embody our commitment</p>
+        </div>
+        <div class="margin-padding-titles">
+            <img src="imgs/07042019.png" alt="A crowd of people at a concert">
+        </div>
+    </div>
+</div>
 
 
 
