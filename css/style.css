@@ -158,7 +158,6 @@ body {
 .img-container {
     height: 300px; /* Set the desired height for the card image */
     overflow: hidden;
-    border-radius: 100%;
 }
 
 .img-container img {
