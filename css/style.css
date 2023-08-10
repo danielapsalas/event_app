@@ -122,7 +122,7 @@ body {
 }
 
 .margin-padding-titles{
-    margin: 1.5%;
+    margin: 1%;
 }
 
 
@@ -212,8 +212,12 @@ body {
 }
 
 .info-landing-margin{
-    margin: 1%;
-    padding: .5%;
+    margin: 0 1% 0 1%;
+    padding: 1%;
+}
+
+.info-landing-margin{
+
 }
 
 /*.info-container-border{*/
