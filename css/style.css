@@ -239,6 +239,13 @@ body {
     /* Replace #your-color with the desired background color */
     background-color: #B81616;
 }
+
+.info-icons{
+    color: #B81616;
+    height: 12%;
+    margin: 1%;
+    padding: 2%;
+}
 /* media query for smaller screens */
 @media screen and (max-width: 768px) {
     /* adjust landing page collage for smaller screens */
