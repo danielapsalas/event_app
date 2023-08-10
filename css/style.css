@@ -143,12 +143,12 @@ body {
     margin: 1rem;
 }
 
-.grid-card-item {
-    box-sizing: border-box;
-    width: 25rem;
-    height: 20rem;
-    border: 2px solid red;
-}
+/*.grid-card-item {*/
+/*    box-sizing: border-box;*/
+/*    width: 25rem;*/
+/*    height: 20rem;*/
+/*    border: 2px solid red;*/
+/*}*/
 
 .grid-card-item {
     display: flex;
@@ -228,6 +228,10 @@ body {
     display: flex;
 }
 
+.testimonial-flex-people{
+    display: flex;
+}
+
 .testimonial-bg{
     background-color: #9A9A9A;
 }
@@ -288,6 +292,8 @@ body {
     .margin-padding-titles{
         margin: 5%;
     }
+
+
 }
 
 /* media query for larger screens */
