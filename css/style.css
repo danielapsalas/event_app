@@ -2,6 +2,8 @@
 * {
     margin: 0;
     padding: 0;
+    border: 0;
+    box-sizing: border-box;
     font-size: 16px;
 }
 
@@ -189,6 +191,7 @@ body {
 .info-box-containers div{
     margin: 0 1rem;
     padding: 1rem;
+    height: 28rem;
 }
 
 
@@ -212,10 +215,12 @@ body {
 }
 
 .info-landing-margin{
-    margin: 0 1% 0 1%;
+    margin:  2% 1% 0;
     padding: 1%;
 }
-
+/*.info-box-containers * {*/
+/*    box-sizing: border-box;*/
+/*}*/
 
 /*.info-container-border{*/
 /*    border: 2px #414141 solid;*/
