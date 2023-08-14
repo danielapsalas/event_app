@@ -295,10 +295,14 @@ body {
     }
 
     .margin-padding-titles{
-        margin: 5%;
+        margin: 10%;
+        padding: 1rem;
     }
 
-
+    /*.info-landing-margin{*/
+    /*    margin:  5% 1% 0;*/
+    /*    padding: 1%;*/
+    /*}*/
 }
 
 /* media query for larger screens */
