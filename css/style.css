@@ -236,6 +236,9 @@ body {
     background-color: #9A9A9A;
 }
 
+.testimonial-size{
+    width: 20rem!important;
+}
 /*.testimonial-size{*/
 /*    max-width: 80%;*/
 /*    !*height: 600px!important;*!*/
