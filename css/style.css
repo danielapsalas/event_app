@@ -259,6 +259,11 @@ body {
     margin: 1%;
     padding: 2%;
 }
+
+
+/*.img-events img{*/
+/*    width: 20rem;*/
+/*}*/
 /* media query for smaller screens */
 @media screen and (max-width: 768px) {
     /* adjust landing page collage for smaller screens */
@@ -295,10 +300,14 @@ body {
     }
 
     .margin-padding-titles{
-        margin: 10%;
-        padding: 1rem;
+        margin: 10% 10% 0;
+        padding: 1% 0 1% 1%;
     }
 
+    .sm-screen-size{
+        margin: 10% 10% 0;
+        padding: 1% 0 1% 1%;
+    }
     /*.info-landing-margin{*/
     /*    margin:  5% 1% 0;*/
     /*    padding: 1%;*/
@@ -312,6 +321,10 @@ body {
         display: flex;
         justify-content: center;
         align-content: center;
+    }
+
+    .lg-text-center{
+        text-align: center;
     }
 }
 
